@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE88B8972A7334F200E6759E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B8962A7334F200E6759E /* AppDelegate.swift */; };
 		CE88B8992A7334F200E6759E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B8982A7334F200E6759E /* SceneDelegate.swift */; };
-		CE88B89B2A7334F200E6759E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B89A2A7334F200E6759E /* ViewController.swift */; };
+		CE88B89B2A7334F200E6759E /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B89A2A7334F200E6759E /* HeroViewController.swift */; };
 		CE88B89E2A7334F200E6759E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE88B89C2A7334F200E6759E /* Main.storyboard */; };
 		CE88B8A02A7334F300E6759E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE88B89F2A7334F300E6759E /* Assets.xcassets */; };
 		CE88B8A32A7334F300E6759E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE88B8A12A7334F300E6759E /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		CE88B8932A7334F200E6759E /* App-AnaWill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-AnaWill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE88B8962A7334F200E6759E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE88B8982A7334F200E6759E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE88B89A2A7334F200E6759E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE88B89A2A7334F200E6759E /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		CE88B89D2A7334F200E6759E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE88B89F2A7334F300E6759E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE88B8A22A7334F300E6759E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				CE88B8962A7334F200E6759E /* AppDelegate.swift */,
 				CE88B8982A7334F200E6759E /* SceneDelegate.swift */,
-				CE88B89A2A7334F200E6759E /* ViewController.swift */,
+				CE88B89A2A7334F200E6759E /* HeroViewController.swift */,
 				CE88B89C2A7334F200E6759E /* Main.storyboard */,
 				CE88B89F2A7334F300E6759E /* Assets.xcassets */,
 				CE88B8A12A7334F300E6759E /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE88B89B2A7334F200E6759E /* ViewController.swift in Sources */,
+				CE88B89B2A7334F200E6759E /* HeroViewController.swift in Sources */,
 				CE88B8972A7334F200E6759E /* AppDelegate.swift in Sources */,
 				CE88B8992A7334F200E6759E /* SceneDelegate.swift in Sources */,
 			);
@@ -291,7 +291,7 @@
 				INFOPLIST_FILE = "App-AnaWill/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +318,7 @@
 				INFOPLIST_FILE = "App-AnaWill/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
