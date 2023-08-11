@@ -1,12 +1,20 @@
 import UIKit
 
 class HeroViewController: UIViewController {
-    private var heroes = [
-        "Batman",
-        "Homem Aranha",
-        "Homem de Ferro",
-        "Capitão América",
-        "Homem Formiga"
+//    private var heroes = [
+//      "Thor",
+//      "Homem Aranha",
+//      "Homem de Ferro",
+//      "Capitão América",
+//      "Homem Formiga"
+//   ]
+    
+    private let heroesvillains: [HeroesVillains] = [
+        .init(name: "Thor", empresa: "Marvel", imagURL: ""),
+        .init(name: "Homem Aranha", empresa: "Marvel", imagURL: ""),
+        .init(name: "Homem de Ferro", empresa: "Marvel", imagURL: ""),
+        .init(name: "Capitão América", empresa: "Marvel", imagURL: ""),
+        .init(name: "Homem Formiga", empresa: "Marvel", imagURL: "")
     ]
 
     //1
@@ -19,7 +27,7 @@ class HeroViewController: UIViewController {
         label.numberOfLines = 0
         label.text = "Heróis da Marvel"
         return label
-        
+
     }()
     
     private let tableView: UITableView = {
@@ -31,13 +39,13 @@ class HeroViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
     }
     
     private func setupView(){
         view.backgroundColor = .white
         tableView.dataSource = self
+        tableView.delegate = self
         addViewInitHierarchy()
         setupConstraints()
         
@@ -70,13 +78,22 @@ class HeroViewController: UIViewController {
 
 extension  HeroViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        heroes.count
+        heroesvillains.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = heroes[indexPath.row]
+        let cell = HeroesCell()
+        let herovillain = heroesvillains[indexPath.row]
+        cell.setup(herovillain: herovillain)
         return cell
+    }
+}
+
+extension  HeroViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard  = UIStoryboard(name: "Detail", bundle: Bundle(for: DetailViewController.self))
+        let detailViewController = storyboard.instantiateViewController(withIdentifier: "Detail")
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
