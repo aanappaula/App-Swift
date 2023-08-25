@@ -1,13 +1,13 @@
 import UIKit
 
 class HeroViewController: UIViewController {
-//    private var heroes = [
-//      "Thor",
-//      "Homem Aranha",
-//      "Homem de Ferro",
-//      "Capitão América",
-//      "Homem Formiga"
-//   ]
+    //    private var heroes = [
+    //      "Thor",
+    //      "Homem Aranha",
+    //      "Homem de Ferro",
+    //      "Capitão América",
+    //      "Homem Formiga"
+    //   ]
     
     private let heroesvillains: [HeroesVillains] = [
         .init(name: "Thor", empresa: "Marvel", imagURL: ""),
@@ -16,7 +16,7 @@ class HeroViewController: UIViewController {
         .init(name: "Capitão América", empresa: "Marvel", imagURL: ""),
         .init(name: "Homem Formiga", empresa: "Marvel", imagURL: "")
     ]
-
+    
     //1
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -27,7 +27,7 @@ class HeroViewController: UIViewController {
         label.numberOfLines = 0
         label.text = "Heróis da Marvel"
         return label
-
+        
     }()
     
     private let tableView: UITableView = {
@@ -36,7 +36,7 @@ class HeroViewController: UIViewController {
         table.separatorStyle = .none
         return table
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -48,6 +48,7 @@ class HeroViewController: UIViewController {
         tableView.delegate = self
         addViewInitHierarchy()
         setupConstraints()
+        fetchRemoteHeroesVillains()
         
     }
     
@@ -74,6 +75,20 @@ class HeroViewController: UIViewController {
         ])
         
     }
+    
+    private func fetchRemoteHeroesVillains () {
+//        let url = ˜https://superheroapi.com/api/3976847639208455language=pt-BR˜
+        let url = URL(string: "https://superheroapi.com/api/3976847639208455/search/man")!
+        
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) {data, _, error in if error == nil {return}
+            
+            guard let data else {return}
+            print(data)
+            
+        }
+    }
 }
 
 extension  HeroViewController: UITableViewDataSource {
@@ -91,8 +106,10 @@ extension  HeroViewController: UITableViewDataSource {
 
 extension  HeroViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let herovillain = heroesvillains [indexPath.row]
         let storyboard  = UIStoryboard(name: "Detail", bundle: Bundle(for: DetailViewController.self))
-        let detailViewController = storyboard.instantiateViewController(withIdentifier: "Detail")
+        let detailViewController = storyboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController
+        detailViewController.heroesvillais = herovillain
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

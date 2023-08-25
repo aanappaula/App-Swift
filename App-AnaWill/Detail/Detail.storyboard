@@ -11,22 +11,71 @@
         <!--Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Detail" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="App_AnaWill" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="App_AnaWill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VfZ-em-Qbu">
+                                <rect key="frame" x="92.666666666666686" y="142.66666666666666" width="190" height="219.99999999999997"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="7EN-Tf-sgZ"/>
+                                    <constraint firstAttribute="width" constant="190" id="SKM-zv-C3m"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homem Aranha" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkM-TZ-KzO">
+                                <rect key="frame" x="32" y="82" width="311" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classifica;áo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPL-jm-I4K">
+                                <rect key="frame" x="32" y="394.66666666666669" width="311" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descri;áo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPb-Wg-yPf">
+                                <rect key="frame" x="32" y="446" width="311" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" systemColor="systemGray2Color"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RPL-jm-I4K" firstAttribute="top" secondItem="VfZ-em-Qbu" secondAttribute="bottom" constant="32" id="0LN-NX-Qbc"/>
+                            <constraint firstItem="RPL-jm-I4K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="Omh-Nr-wn4"/>
+                            <constraint firstItem="lkM-TZ-KzO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="RWH-eS-USf"/>
+                            <constraint firstItem="CPb-Wg-yPf" firstAttribute="top" secondItem="RPL-jm-I4K" secondAttribute="bottom" constant="32" id="Rdb-Wy-itG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lkM-TZ-KzO" secondAttribute="trailing" constant="32" id="UvI-0g-Xkn"/>
+                            <constraint firstItem="VfZ-em-Qbu" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="W09-8Y-bLV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CPb-Wg-yPf" secondAttribute="trailing" constant="32" id="g9M-UI-dzS"/>
+                            <constraint firstItem="CPb-Wg-yPf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="gqQ-ev-D0i"/>
+                            <constraint firstItem="VfZ-em-Qbu" firstAttribute="top" secondItem="lkM-TZ-KzO" secondAttribute="bottom" constant="32" id="kXt-24-thj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RPL-jm-I4K" secondAttribute="trailing" constant="32" id="rd9-n7-zcv"/>
+                            <constraint firstItem="lkM-TZ-KzO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="rmZ-SC-kMH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heroVillainDescription" destination="CPb-Wg-yPf" id="OC0-YX-psX"/>
+                        <outlet property="heroVillainEmpresa" destination="RPL-jm-I4K" id="nkv-ex-Rhw"/>
+                        <outlet property="heroVillainImageView" destination="VfZ-em-Qbu" id="2Kk-Ek-xLj"/>
+                        <outlet property="nameHeroVillain" destination="lkM-TZ-KzO" id="3Qz-gp-tkH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-35.054347826086961"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

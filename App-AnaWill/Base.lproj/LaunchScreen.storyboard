@@ -15,8 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SUper" translatesAutoresizingMaskIntoConstraints="NO" id="FAn-P1-Mbq">
+                                <rect key="frame" x="96.666666666666686" y="338.66666666666669" width="200" height="200.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6c9-Is-T2e"/>
+                                    <constraint firstAttribute="width" constant="200" id="jtB-NV-S2j"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FAn-P1-Mbq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BCl-T1-vzP"/>
+                            <constraint firstItem="FAn-P1-Mbq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CMm-KT-52X"/>
+                            <constraint firstItem="FAn-P1-Mbq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="IeU-g2-Ew4"/>
+                            <constraint firstItem="FAn-P1-Mbq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nU1-bU-jmR"/>
+                            <constraint firstItem="FAn-P1-Mbq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ynl-U1-frd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,6 +41,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SUper" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
