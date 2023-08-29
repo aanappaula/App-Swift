@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE3B37132A80271F00FF6B93 /* HeroesVillains.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B37122A80271F00FF6B93 /* HeroesVillains.swift */; };
 		CE3B37152A802B2000FF6B93 /* HeroesVillainsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B37142A802B2000FF6B93 /* HeroesVillainsCell.swift */; };
+		CE6A3FD22A9D6FA800B9231C /* SHRemoteHeroVillain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A3FD12A9D6FA800B9231C /* SHRemoteHeroVillain.swift */; };
+		CE6A3FD52A9D7B9700B9231C /* UIImaveView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A3FD42A9D7B9700B9231C /* UIImaveView+Download.swift */; };
 		CE88B8972A7334F200E6759E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B8962A7334F200E6759E /* AppDelegate.swift */; };
 		CE88B8992A7334F200E6759E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B8982A7334F200E6759E /* SceneDelegate.swift */; };
 		CE88B89B2A7334F200E6759E /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B89A2A7334F200E6759E /* HeroViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		CE3B37122A80271F00FF6B93 /* HeroesVillains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesVillains.swift; sourceTree = "<group>"; };
 		CE3B37142A802B2000FF6B93 /* HeroesVillainsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesVillainsCell.swift; sourceTree = "<group>"; };
+		CE6A3FD12A9D6FA800B9231C /* SHRemoteHeroVillain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRemoteHeroVillain.swift; sourceTree = "<group>"; };
+		CE6A3FD42A9D7B9700B9231C /* UIImaveView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImaveView+Download.swift"; sourceTree = "<group>"; };
 		CE88B8932A7334F200E6759E /* App-AnaWill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App-AnaWill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE88B8962A7334F200E6759E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE88B8982A7334F200E6759E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE6A3FD02A9D6F0900B9231C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE3B37122A80271F00FF6B93 /* HeroesVillains.swift */,
+				CE6A3FD12A9D6FA800B9231C /* SHRemoteHeroVillain.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE6A3FD32A9D7AB700B9231C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE6A3FD42A9D7B9700B9231C /* UIImaveView+Download.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CE88B88A2A7334F200E6759E = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +85,8 @@
 		CE88B8952A7334F200E6759E /* App-AnaWill */ = {
 			isa = PBXGroup;
 			children = (
+				CE6A3FD32A9D7AB700B9231C /* Extensions */,
+				CE6A3FD02A9D6F0900B9231C /* Models */,
 				CEC7908A2A85AE96005C2AE5 /* Detail */,
 				CEC790892A85AE4B005C2AE5 /* Home */,
 				CE88B8962A7334F200E6759E /* AppDelegate.swift */,
@@ -80,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				CE88B89A2A7334F200E6759E /* HeroViewController.swift */,
-				CE3B37122A80271F00FF6B93 /* HeroesVillains.swift */,
 				CE3B37142A802B2000FF6B93 /* HeroesVillainsCell.swift */,
 			);
 			path = Home;
@@ -169,6 +191,8 @@
 			files = (
 				CE3B37152A802B2000FF6B93 /* HeroesVillainsCell.swift in Sources */,
 				CE88B89B2A7334F200E6759E /* HeroViewController.swift in Sources */,
+				CE6A3FD22A9D6FA800B9231C /* SHRemoteHeroVillain.swift in Sources */,
+				CE6A3FD52A9D7B9700B9231C /* UIImaveView+Download.swift in Sources */,
 				CE88B8972A7334F200E6759E /* AppDelegate.swift in Sources */,
 				CEC7908C2A85AF06005C2AE5 /* DetailViewController.swift in Sources */,
 				CE88B8992A7334F200E6759E /* SceneDelegate.swift in Sources */,

@@ -9,13 +9,7 @@ class HeroViewController: UIViewController {
     //      "Homem Formiga"
     //   ]
     
-    private let heroesvillains: [HeroesVillains] = [
-        .init(name: "Thor", empresa: "Marvel", imagURL: ""),
-        .init(name: "Homem Aranha", empresa: "Marvel", imagURL: ""),
-        .init(name: "Homem de Ferro", empresa: "Marvel", imagURL: ""),
-        .init(name: "Capitão América", empresa: "Marvel", imagURL: ""),
-        .init(name: "Homem Formiga", empresa: "Marvel", imagURL: "")
-    ]
+    private var heroesvillains: [HeroesVillains] = [  ]
     
     //1
     private let titleLabel: UILabel = {
@@ -77,17 +71,27 @@ class HeroViewController: UIViewController {
     }
     
     private func fetchRemoteHeroesVillains () {
-//        let url = ˜https://superheroapi.com/api/3976847639208455language=pt-BR˜
+        //        let url = ˜https://superheroapi.com/api/3976847639208455language=pt-BR˜
         let url = URL(string: "https://superheroapi.com/api/3976847639208455/search/man")!
         
         let request = URLRequest(url: url)
         
-        URLSession.shared.dataTask(with: request) {data, _, error in if error == nil {return}
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        let task = URLSession.shared.dataTask(with: request) {data, _, error in if error != nil {return}
             
             guard let data else {return}
-            print(data)
             
+            guard let remoteHeroesVillains = try? decoder.decode(SHRemoteHeroVillain.self, from: data) else { return }
+            
+            self.heroesvillains = remoteHeroesVillains.results
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
+        task.resume()
     }
 }
 

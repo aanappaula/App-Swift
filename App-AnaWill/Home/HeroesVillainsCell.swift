@@ -49,6 +49,7 @@ class HeroesCell: UITableViewCell {
         addViewsInHierarchy()
         setupConstraints()
         
+        
     }
     
     @available(*, unavailable)
@@ -59,6 +60,7 @@ class HeroesCell: UITableViewCell {
     public func setup(herovillain:HeroesVillains){
         nameLebel.text = herovillain.name
         empresaLebel.text = "Empresa \(herovillain.empresa)"
+        herovillainImageView.download(from: herovillain.imagePath)
     }
     
     private func setupView () {

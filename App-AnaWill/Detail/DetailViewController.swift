@@ -16,6 +16,14 @@ class DetailViewController: UIViewController {
         heroVillainImageView.contentMode = .scaleAspectFill
         heroVillainImageView.backgroundColor = .purple
         
+        configure(with: heroesvillais)
+        
+    }
+    func configure(with herovillain: HeroesVillains) {
         nameHeroVillain.text = heroesvillais.name
+        heroVillainEmpresa.text = "Empresa \(herovillain.empresa)"
+        heroVillainDescription.text = herovillain.biography
+        heroVillainImageView.download(from: herovillain.imagePath)
+
     }
 }
