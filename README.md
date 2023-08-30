@@ -29,11 +29,11 @@ Before starting, check the following requirements:
 
 if you have ssh configured, run the command
 ```
-git clone git@github.com:yago-marques/WeCare.git
+git@github.com:aanappaula/App-Swift.git
 ```
 if you don't have ssh configured, run the command
 ```
-git clone https://github.com/yago-marques/WeCare.git
+git clone https://github.com/aanappaula/App-Swift.git
 ```
 
 After installing, open the installed folder with XCode and run `command + R`
@@ -53,7 +53,7 @@ see the GitHub documentation on [how to create a pull request](https://help.gith
   <tr>
     <td align="center">
       <a href="https://github.com/aanappaula">
-        <img src="link da imagem do github do participante" width="100px;"/><br>
+        <img src="anaa.jpeg" width="100px;"/><br>
         <sub>
           <b>Ana Paula de Souza</b>
         </sub>
@@ -62,8 +62,8 @@ see the GitHub documentation on [how to create a pull request](https://help.gith
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/aanappaula">
-        <img src="link da imagem do github do participante" width="100px;"/><br>
+      <a href="https://github.com/Nunes-Willi">
+        <img src="will.jpg" width="100px;"/><br>
         <sub>
           <b>William</b>
         </sub>
