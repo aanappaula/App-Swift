@@ -59,8 +59,8 @@ class HeroesCell: UITableViewCell {
     
     public func setup(herovillain:HeroesVillains){
         nameLebel.text = herovillain.name
-        empresaLebel.text = "Empresa \(herovillain.empresa)"
-        herovillainImageView.download(from: herovillain.imagePath)
+        empresaLebel.text = herovillain.biography.fullName
+        herovillainImageView.download(from: herovillain.image.url)
     }
     
     private func setupView () {

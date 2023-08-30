@@ -10,8 +10,7 @@ import UIKit
 extension UIImageView {
     
     func download(from imagePath: String){
-        var url = URL(string: "https://superheroapi.com/api/3976847639208455/id/image")!
-        url.append (path: imagePath)
+        let url = URL(string: imagePath)!
         
         URLSession.shared.dataTask(with: .init(url: url)) { data, _, error in
             if error != nil {return}

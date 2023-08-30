@@ -21,9 +21,9 @@ class DetailViewController: UIViewController {
     }
     func configure(with herovillain: HeroesVillains) {
         nameHeroVillain.text = heroesvillais.name
-        heroVillainEmpresa.text = "Empresa \(herovillain.empresa)"
-        heroVillainDescription.text = herovillain.biography
-        heroVillainImageView.download(from: herovillain.imagePath)
+        heroVillainEmpresa.text = herovillain.biography.fullName
+        heroVillainDescription.text = herovillain.biography.firsAppearence
+        heroVillainImageView.download(from: herovillain.image.url)
 
     }
 }
