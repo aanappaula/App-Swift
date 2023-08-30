@@ -53,7 +53,7 @@ see the GitHub documentation on [how to create a pull request](https://help.gith
   <tr>
     <td align="center">
       <a href="https://github.com/aanappaula">
-        <img src="anaa.jpeg" width="100px;"/><br>
+        <img src="napaula.jpeg" width="100px;"/><br>
         <sub>
           <b>Ana Paula de Souza</b>
         </sub>
