@@ -19,7 +19,7 @@ class HeroViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.textColor = .purple
         label.numberOfLines = 0
-        label.text = "Heróis da Marvel"
+        label.text = "Super Heróis"
         return label
         
     }()
